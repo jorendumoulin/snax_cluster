@@ -32,8 +32,8 @@ SNITCH_ROOT := $(ROOT)
 
 include $(ROOT)/target/common/common.mk
 
-SNAX_STREAMER_GEMM ?= $(shell $(BENDER) path snax-dev)
-include $(SNAX_STREAMER_GEMM)/Makefile
+SNAX_DEV_ROOT ?= $(shell $(BENDER) path snax-dev)
+include $(SNAX_DEV_ROOT)/Makefile
 
 ############
 # Programs #
