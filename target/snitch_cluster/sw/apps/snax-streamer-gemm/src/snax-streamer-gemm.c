@@ -46,7 +46,7 @@ int main() {
 
         // Set GEMM configuration CSR
         set_block_gemm_csr();
-        // Set CSR to start GEMM 
+        // Set CSR to start GEMM
         set_block_gemm_start();
 
         // Poll until Streamer and GEMM accelerator finish
