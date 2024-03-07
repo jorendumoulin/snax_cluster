@@ -97,7 +97,7 @@ def emit_gemm_data(**kwargs):
             "int32_t", "strideHalfC", kwargs["strideHalfC"]
         )
     ]
-    
+
     data_str += [format_scalar_definition("int32_t", "ldA", kwargs["ldA"])]
     data_str += [format_scalar_definition("int32_t", "ldB", kwargs["ldB"])]
     data_str += [format_scalar_definition("int32_t", "ldC", kwargs["ldC"])]
@@ -127,13 +127,13 @@ def emit_gemm_data(**kwargs):
             "int32_t", "delta_local_c", kwargs["delta_local_c"]
         )
     ]
-    
+
     # Generating random 8 integer a and b for subtraction
     # subtraction_a = np.random.randint(MIN, MAX)
     # subtraction_b = np.random.randint(MIN, MAX)
     subtraction_a = 0
     subtraction_b = 0
-    
+
     # Writing the subtraction value to data.h
     data_str += [
         format_scalar_definition(
