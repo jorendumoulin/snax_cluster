@@ -40,12 +40,17 @@ int main() {
         uint32_t gemm_start = snrt_mcycle();
 
         // Set Streamer configuration CSR
-        set_streamer_csr();
+        set_streamer_csr(K, N, M, strideInnermostA, ldA, strideInnermostB, ldB,
+                         strideInnermostC, ldC, delta_local_a, delta_local_b,
+                         delta_local_c);
         // Set CSR to start Streamer
         set_streamer_start();
 
         // Set GEMM configuration CSR
-        set_block_gemm_csr();
+        uint32_t subtraction_setting =
+            gen_subtraction_config(subtraction_a, subtraction_b);
+
+        set_block_gemm_csr(K, N, M, subtraction_setting);
         // Set CSR to start GEMM
         set_block_gemm_start();
 

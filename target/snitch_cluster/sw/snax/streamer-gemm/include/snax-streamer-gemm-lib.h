@@ -11,13 +11,17 @@
 #pragma once
 
 // Set STREAMER configuration CSR
-void set_streamer_csr();
+void set_streamer_csr(int tempLoop0, int tempLoop1, int tempLoop2,
+                      int tempStride0A, int tempStride2A, int tempStride0B,
+                      int tempStride1B, int tempStride1C, int tempStride2C,
+                      int delta_local_a, int delta_local_b, int delta_local_c);
 
 // Set CSR to start STREAMER
 void set_streamer_start();
 
 // Set GEMM configuration CSR
-void set_block_gemm_csr();
+void set_block_gemm_csr(int tempLoop0, int tempLoop1, int tempLoop2,
+                        int subtractions);
 
 // Set CSR to start GEMM
 void set_block_gemm_start();
