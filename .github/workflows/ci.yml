@@ -161,9 +161,9 @@ jobs:
         run: |-
           ./run.py --simulator verilator \
           sw/runtime.yaml sw/standard-fp.yaml sw/snax-gemm-run.yaml -j
-  
+
   sw-snax-streamer-gemm-cluster-vlt-generic:
-    name: Simulate SW on SNAX Streamer GEMM Cluster w/ Verilator (Generic LLVM
+    name: Simulate SW on SNAX Streamer GEMM Cluster w/ Verilator (Generic LLVM)
     runs-on: ubuntu-22.04
     container:
       image: ghcr.io/kuleuven-micas/snax:latest
