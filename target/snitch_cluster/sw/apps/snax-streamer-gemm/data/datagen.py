@@ -129,10 +129,8 @@ def emit_gemm_data(**kwargs):
     ]
 
     # Generating random 8 integer a and b for subtraction
-    # subtraction_a = np.random.randint(MIN, MAX)
-    # subtraction_b = np.random.randint(MIN, MAX)
-    subtraction_a = 0
-    subtraction_b = 0
+    subtraction_a = np.random.randint(MIN, MAX)
+    subtraction_b = np.random.randint(MIN, MAX)
 
     # Writing the subtraction value to data.h
     data_str += [
