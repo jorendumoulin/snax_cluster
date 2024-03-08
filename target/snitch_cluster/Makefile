@@ -32,11 +32,25 @@ SNITCH_ROOT := $(ROOT)
 
 include $(ROOT)/target/common/common.mk
 
-SNAX_GEMM_ROOT ?= $(shell $(BENDER) path snax-gemm)
-include $(SNAX_GEMM_ROOT)/Makefile
+ifeq (${CFG_OVERRIDE}, cfg/snax-gemm.hjson)
+	SNAX_GEMM_ROOT ?= $(shell $(BENDER) path snax-gemm)
+	include $(SNAX_GEMM_ROOT)/Makefile	
 
-SNAX_DEV_ROOT ?= $(shell $(BENDER) path snax-dev)
-include $(SNAX_DEV_ROOT)/Makefile
+	VSIM_BENDER += -t snax-gemm
+	VLT_BENDER  += -t snax-gemm
+	VCS_BENDER  += -t snax-gemm
+endif
+
+ifeq (${CFG_OVERRIDE}, cfg/snax-streamer-gemm.hjson)
+	SNAX_DEV_ROOT ?= $(shell $(BENDER) path snax-stream-gemm-dev)
+	include $(SNAX_DEV_ROOT)/Makefile
+
+	VSIM_BENDER += -t snax-stream-gemm-dev
+	VLT_BENDER  += -t snax-stream-gemm-dev
+	VCS_BENDER  += -t snax-stream-gemm-dev
+endif
+
+
 
 ############
 # Programs #
@@ -72,10 +86,6 @@ CFG         = cfg/lru.hjson
 VSIM_BENDER += -t snitch_cluster
 VLT_BENDER  += -t snitch_cluster
 VCS_BENDER  += -t snitch_cluster
-
-VSIM_BENDER += -t snax-gemm
-VLT_BENDER  += -t snax-gemm
-VCS_BENDER  += -t snax-gemm
 
 QUESTA_64BIT = -64
 VLOG_64BIT   = -64
