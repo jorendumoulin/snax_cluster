@@ -42,7 +42,7 @@ ifeq (${CFG_OVERRIDE}, cfg/snax-gemm.hjson)
 endif
 
 ifeq (${CFG_OVERRIDE}, cfg/snax-streamer-gemm.hjson)
-	SNAX_DEV_ROOT ?= $(shell $(BENDER) path snax-dev)
+	SNAX_DEV_ROOT ?= $(shell $(BENDER) path snax-stream-gemm-dev)
 	include $(SNAX_DEV_ROOT)/Makefile
 
 	VSIM_BENDER += -t snax-stream-gemm-dev
