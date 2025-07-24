@@ -67,3 +67,5 @@ mkdir -p ${PREFIX}/snax-utils
 cp util/trace/gen_trace.py ${PREFIX}/snax-utils
 build_snax_verilator cfg/asplos_matmul.hjson ${PREFIX}/snax-utils/asplos_matmul
 build_snax_verilator cfg/asplos_matvec.hjson ${PREFIX}/snax-utils/asplos_matvec
+build_snax_verilator cfg/asplos_matvec_narrow.hjson ${PREFIX}/snax-utils/asplos_matvec_narrow
+build_snax_verilator cfg/snax_KUL_cluster.hjson ${PREFIX}/snax-utils/snax-kul-cluster-mixed-narrow-wide
