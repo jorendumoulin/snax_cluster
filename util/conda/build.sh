@@ -69,3 +69,15 @@ build_snax_verilator cfg/asplos_matmul.hjson ${PREFIX}/snax-utils/asplos_matmul
 build_snax_verilator cfg/asplos_matmul_full_bw.hjson ${PREFIX}/snax-utils/asplos_matmul_full_bw
 build_snax_verilator cfg/asplos_matvec.hjson ${PREFIX}/snax-utils/asplos_matvec
 build_snax_verilator cfg/snax_KUL_cluster.hjson ${PREFIX}/snax-utils/snax-kul-cluster-mixed-narrow-wide
+build_snax_verilator cfg/asplos_matmul_1.hjson ${PREFIX}/snax-utils/asplos_matmul_1
+build_snax_verilator cfg/asplos_matmul_2.hjson ${PREFIX}/snax-utils/asplos_matmul_2
+build_snax_verilator cfg/asplos_matmul_3.hjson ${PREFIX}/snax-utils/asplos_matmul_3
+build_snax_verilator cfg/asplos_matmul_4.hjson ${PREFIX}/snax-utils/asplos_matmul_4
+build_snax_verilator cfg/asplos_matmul_5.hjson ${PREFIX}/snax-utils/asplos_matmul_5
+build_snax_verilator cfg/asplos_matmul_6.hjson ${PREFIX}/snax-utils/asplos_matmul_6
+build_snax_verilator cfg/asplos_matmul_7.hjson ${PREFIX}/snax-utils/asplos_matmul_7
+build_snax_verilator cfg/asplos_matmul_8.hjson ${PREFIX}/snax-utils/asplos_matmul_8
+build_snax_verilator cfg/asplos_matmul_full_bw_1.hjson ${PREFIX}/snax-utils/asplos_matmul_full_bw_1
+build_snax_verilator cfg/asplos_matmul_full_bw_2.hjson ${PREFIX}/snax-utils/asplos_matmul_full_bw_2
+build_snax_verilator cfg/asplos_matmul_full_bw_3.hjson ${PREFIX}/snax-utils/asplos_matmul_full_bw_3
+build_snax_verilator cfg/asplos_matmul_full_bw_4.hjson ${PREFIX}/snax-utils/asplos_matmul_full_bw_4
