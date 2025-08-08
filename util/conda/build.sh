@@ -65,6 +65,7 @@ mkdir -p ${PREFIX}/bin
 cp spike-dasm ${PREFIX}/bin/spike-dasm
 mkdir -p ${PREFIX}/snax-utils
 cp util/trace/gen_trace.py ${PREFIX}/snax-utils
+build_snax_verilator cfg/asplos_resnet.hjson ${PREFIX}/snax-utils/asplos_resnet
 build_snax_verilator cfg/asplos_matmul.hjson ${PREFIX}/snax-utils/asplos_matmul
 build_snax_verilator cfg/asplos_matmul_full_bw.hjson ${PREFIX}/snax-utils/asplos_matmul_full_bw
 build_snax_verilator cfg/asplos_matvec.hjson ${PREFIX}/snax-utils/asplos_matvec
