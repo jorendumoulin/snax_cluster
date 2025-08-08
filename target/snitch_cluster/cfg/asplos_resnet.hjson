@@ -171,7 +171,7 @@
             fifo_depth: [8, 8],
             configurable_channel: [0, 0],
             tcdm_logic_word_size: [[256, 128, 64], [256, 128, 64]],
-            datapath_extensions: [{}, {HasTransposer: {row:[8], col:[8], elementWidth:[8]}}]
+            datapath_extensions: [{}, {}]
         },
 
         data_writer_params:{
@@ -194,7 +194,7 @@
         },
 
         # needs to be ketp for csr num calculation in snax_gen.py
-        has_transpose: true,
+        has_transpose: false,
 
         has_C_broadcast: true,
 
