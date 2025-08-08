@@ -149,26 +149,6 @@
     // Templates.
     dma_core_template: {
         isa: "rv32ima",
-        snax_xdma_cfg: {
-            bender_target: ["snax_KUL_cluster_xdma"],
-            // Cross Cluster Calling Cfg
-            max_multicast: 25,
-            max_dimension: 5,
-            max_mem_size: 4096,
-            // DataMaestro Cfg
-            reader_buffer: 12, 
-            writer_buffer: 12, 
-            reader_agu_temporal_dimension: 5,
-            writer_agu_temporal_dimension: 5,
-            // Extension Cfg
-            writer_extensions: {
-                HasVerilogMemset: {},
-                HasTransposer: {row:[8, 8], col:[8, 8], elementWidth:[8, 16]},
-            },
-            reader_extensions: {
-                HasMaxPool: {},
-            }
-        },
         // Xdiv_sqrt: true,
         # isa: "rv32ema",
         xdma: true
