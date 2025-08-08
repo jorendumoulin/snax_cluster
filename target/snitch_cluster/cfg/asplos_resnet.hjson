@@ -18,7 +18,7 @@
         cluster_base_hartid: 0,
         addr_width: 48,
         data_width: 64,
-        user_width: 3
+        user_width: 3,
         tcdm: {
             size: 1024,
             banks: 32,
@@ -137,6 +137,31 @@
         num_dtlb_entries: 1,
         num_itlb_entries: 1,
         // Enable division/square root unit
+        // Xdiv_sqrt: true,
+    },
+    // Templates.
+    dma_core_template: {
+        isa: "rv32ima",
+        // Xdiv_sqrt: true,
+        # isa: "rv32ema",
+        xdma: true
+        xssr: false
+        xfrep: false
+        xf16: false,
+        xf16alt: false,
+        xf8: false,
+        xf8alt: false,
+        xfdotp: false,
+        xfvec: false,
+        num_int_outstanding_loads: 1,
+        num_int_outstanding_mem: 4,
+        num_fp_outstanding_loads: 4,
+        num_fp_outstanding_mem: 4,
+        num_sequencer_instructions: 16,
+        num_dtlb_entries: 1,
+        num_itlb_entries: 1,
+    },
+    // SNAX Streamer Templates
     snax_streamer_gemmX_streamer_template :{
 
         data_reader_params: {
